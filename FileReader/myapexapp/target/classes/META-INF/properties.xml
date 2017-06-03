@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<configuration>
+
+<!-- TO READ FROM A PARTICULAR FILE
+    <property>
+        <name>dt.operator.sensorDataReader.prop.files</name>
+        <value>/user/aishwarya/sensors/Sensorsinput/Sensor01</value>
+    </property>
+    -->
+<!--
+  <property>
+    <name>dt.operator.sensorDataReader.prop.files</name>
+    <value>file:///home/aishwarya/apex/apex-malhar-master/demos/FileReader/myapexapp/src/main/resources/META-INF/Sensorsinput</value>
+  </property>
+  -->
+
+  <property>
+    <name>dt.application.Publisher.operator.sensorData.prop.numTuples</name>
+    <value>40</value>
+  </property>
+
+
+  <!--<property>-->
+    <!--<name>dt.operator.sensorDataReader.prop.files</name>-->
+    <!--<value>/user/dttbc/Sensorsinput</value>-->
+    <!--&lt;!&ndash;<value>file:///home/aishwarya/Desktop/IOTGATEWAYS/Sensorsinput</value>&ndash;&gt;-->
+<!--</property>-->
+
+<!--<property>-->
+  <!--<name>dt.operator.sensorDataReader.prop.minReaders</name>-->
+  <!--<value>1</value>-->
+<!--</property>-->
+
+<!--<property>-->
+  <!--<name>dt.operator.sensorDataReader.prop.maxReaders</name>-->
+  <!--<value>1</value>-->
+<!--</property>-->
+
+<property>
+  <name>dt.operator.*.attr.MEMORY_MB</name>
+  <value>32</value>
+</property>
+
+  <!--<property>-->
+    <!--<name>dt.operator.csvParser.prop.schema</name>-->
+    <!--<value>{-->
+      <!--"separator": "|",-->
+      <!--"quoteChar": "\"",-->
+      <!--"fields": [-->
+      <!--{-->
+      <!--"name": "id",-->
+      <!--"type": "String"-->
+      <!--},-->
+      <!--{-->
+      <!--"name": "time",-->
+      <!--"type": "String"-->
+      <!--},-->
+      <!--{-->
+      <!--"name": "temperature",-->
+      <!--"type": "String"-->
+      <!--}-->
+      <!--]-->
+      <!--}-->
+    <!--</value>-->
+  <!--</property>-->
+  <!--<property>-->
+    <!--<name>dt.operator.csvParser.port.out.attr.TUPLE_CLASS</name>-->
+    <!--<value>com.example.myapexapp.PojoEvent</value> &lt;!&ndash; packagename.PojoEvent &ndash;&gt;-->
+  <!--</property>-->
+
+
+
+
+    <!--
+    <property>
+      <name>dt.application.{appName}.operator.{opName}.prop.{propName}</name>
+      <value>some-default-value (if value is not specified, it is required from the user or custom config when launching)</value>
+    </property>
+    -->
+  <!-- memory assigned to app master
+  <property>
+    <name>dt.attr.MASTER_MEMORY_MB</name>
+    <value>1024</value>
+  </property>
+  -->
+<!--
+  <property>
+    <name>dt.application.Publisher.operator.selectedOutput.prop.filePath</name>
+  <value>file:///home/aishwarya/apex/apex-malhar-master/demos/FileReader/myapexapp/src/main/resources/META-INF/Filtered</value>
+ </property>
+-->
+
+
+
+
+
+ <property>
+   <name>dt.application.Publisher.operator.console.prop.stringFormat</name>
+   <value>hello world: %s</value>
+ </property>
+
+
+
+
+  <property>
+    <name>dt.operator.MqttConverter.port.input.attr.TUPLE_CLASS</name>
+    <value>com.example.myapexapp.PojoEvent</value>
+  </property>
+
+
+
+    <property>
+        <name>dt.operator.MqttConverter.port.output.attr.TUPLE_CLASS</name>
+        <value>com.example.myapexapp.MqttMessage</value>
+    </property>
+
+
+
+
+
+
+  <!--
+
+  PARTITIONING PROPERTies
+
+
+  <property>
+    <name>dt.operator.dedup.attr.PARTITIONER</name>
+    <value>com.datatorrent.common.partitioner.StatelessPartitioner:2</value>
+  </property>
+
+  <property>
+    <name>dt.operator.2.port.inputPortName.attr.PARTITION_PARALLEL</name>
+    <value>true</value>
+  </property>
+
+  -->
+</configuration>
+
+

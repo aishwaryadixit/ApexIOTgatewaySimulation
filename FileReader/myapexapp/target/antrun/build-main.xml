@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <move file="/home/aishwarya/apex/apex-malhar-master/demos/FileReader/myapexapp/target/FileReader-0.8-apexapp.jar" tofile="/home/aishwarya/apex/apex-malhar-master/demos/FileReader/myapexapp/target/FileReader-0.8.apa"/>
+</target>
+</project>
