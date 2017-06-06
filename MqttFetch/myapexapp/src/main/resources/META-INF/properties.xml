@@ -1,0 +1,390 @@
+<?xml version="1.0"?>
+<configuration>
+
+  <property>
+    <name>dt.operator.*.attr.MEMORY_MB</name>
+    <value>64</value>
+  </property>
+
+
+    <property>
+        <name>dt.application.Fetch.operator.csvParser.prop.schema</name>
+        <value>{
+            "separator": "|",
+            "quoteChar": "\"",
+            "fields": [
+            {
+            "name": "id",
+            "type": "String"
+            },
+            {
+            "name": "time",
+            "type": "String"
+            },
+            {
+            "name": "temperature",
+            "type": "String"
+            }
+            ]
+            }
+        </value>
+    </property>
+
+
+    <property>
+        <name>>dt.operator.jsonParser.port.out.attr.TUPLE_CLASS</name>
+        <value>com.example.myapexapp.PojoEvent</value>
+    </property>
+
+    <property>
+        <name>dt.application.Fetch.operator.csvParser.port.out.attr.TUPLE_CLASS</name>
+        <value>com.example.myapexapp.PojoEvent</value> <!-- packagename.PojoEvent -->
+    </property>
+
+  <property>
+    <name>dt.application.Fetch.operator.selectedFormatter.port.in.attr.TUPLE_CLASS</name>
+    <value>com.example.myapexapp.PojoEvent</value>
+  </property>
+
+    <property>
+        <name>dt.application.Fetch.operator.rejectedFormatter.port.in.attr.TUPLE_CLASS</name>
+        <value>com.example.myapexapp.PojoEvent</value>
+    </property>
+
+
+
+
+
+
+
+    <property>
+  <name>dt.application.Fetch.operator.console.prop.stringFormat</name>
+  <value>hello world: %s</value>
+</property>
+
+
+    <property>
+        <name>dt.application.Fetch.operator.filterOperator.port.input.attr.TUPLE_CLASS</name>
+        <value>com.example.myapexapp.PojoEvent</value>
+    </property>
+
+
+
+
+    <property>
+        <name>dt.application.Fetch.operator.filterOperator.prop.condition</name>
+        <value>(2>(Integer.parseInt({$}.getTemperature()))) || ((Integer.parseInt({$}.getTemperature()))>8)</value>
+    </property>
+
+
+    <property>
+        <name>dt.application.Fetch.operator.filterOperator.prop.expressionFunctionsItem[5]</name>
+        <value>org.apache.commons.lang3.BooleanUtils.*</value>
+    </property>
+
+
+
+
+
+
+
+    <!-- SMTP Properties -->
+    <property>
+        <name>dt.operator.mailAlert.prop.subject</name>
+        <value>Alert</value>
+    </property>
+
+    <property>
+        <name>dt.operator.mailAlert.prop.content</name>
+        <value>This is a HIGH ALERT from your Temperature Monitoring System {}</value>
+    </property>
+
+    <property>
+        <name>dt.operator.mailAlert.prop.from</name>
+        <value>aishwaryad248@gmail.com</value>
+    </property>
+
+    <property>
+        <name>dt.operator.mailAlert.prop.smtpUserName</name>
+        <value>aishwaryad248@gmail.com</value>
+    </property>
+
+    <property>
+        <name>dt.operator.mailAlert.prop.smtpPassword</name>
+        <value>fakeacc01</value>
+    </property>
+
+    <property>
+        <name>dt.operator.mailAlert.prop.useSsl</name>
+        <value>false</value>
+    </property>
+
+
+    <property>
+        <name>dt.operator.mailAlert.prop.contentType</name>
+        <value>text/plain</value>
+    </property>
+
+    <property>
+        <name>dt.operator.mailAlert.prop.smtpHost</name>
+        <value>smtp.gmail.com</value>
+    </property>
+
+    <property>
+        <name>dt.operator.mailAlert.recipients(TO)</name>
+        <value>aishwaryad248@gmail.com</value>
+    </property>
+
+    <property>
+        <name>dt.operator.mailAlert.prop.smtpPort</name>
+        <value>587</value>
+    </property>
+
+
+
+
+    <!-- SMTP Properties -->
+    <property>
+        <name>dt.operator.mailAlert2.prop.subject</name>
+        <value>Alert</value>
+    </property>
+
+    <property>
+        <name>dt.operator.mailAlert2.prop.content</name>
+        <value>This is a MODERATE ALERT from your Temperature Monitoring System {}</value>
+    </property>
+
+    <property>
+        <name>dt.operator.mailAlert2.prop.from</name>
+        <value>aishwaryad248@gmail.com</value>
+    </property>
+
+    <property>
+        <name>dt.operator.mailAlert2.prop.smtpUserName</name>
+        <value>aishwaryad248@gmail.com</value>
+    </property>
+
+    <property>
+        <name>dt.operator.mailAlert2.prop.smtpPassword</name>
+        <value>fakeacc01</value>
+    </property>
+
+    <property>
+        <name>dt.operator.mailAlert2.prop.useSsl</name>
+        <value>false</value>
+    </property>
+
+
+    <property>
+        <name>dt.operator.mailAlert2.prop.contentType</name>
+        <value>text/plain</value>
+    </property>
+
+    <property>
+        <name>dt.operator.mailAlert2.prop.smtpHost</name>
+        <value>smtp.gmail.com</value>
+    </property>
+
+    <property>
+        <name>dt.operator.mailAlert2.recipients(TO)</name>
+        <value>aishwaryad248@gmail.com</value>
+    </property>
+
+    <property>
+        <name>dt.operator.mailAlert2.prop.smtpPort</name>
+        <value>587</value>
+    </property>
+
+
+
+
+
+
+
+
+
+
+
+    <!--JDBC2222222 Properties -->
+
+    <property>
+        <name>dt.operator.jdbc2.prop.batchSize</name>
+        <value>5</value>  <!--default value 1000-->
+    </property>
+
+    <property>
+        <name>dt.operator.jdbc2.prop.store.databaseDriver</name>
+        <value>com.mysql.jdbc.Driver</value>
+    </property>
+
+    <property>
+        <name>dt.operator.jdbc2.prop.store.databaseUrl</name>
+        <value>jdbc:mysql://localhost:3306/iot?useSSL=false</value>
+        <!--<value>jdbc:mysql://node35.morado.com:3306/iot?useSSL=false</value>-->
+    </property>
+
+    <property>
+        <name>dt.operator.jdbc2.prop.store.userName</name>
+        <value>root</value>
+    </property>
+
+    <property>
+        <name>dt.operator.jdbc2.prop.store.password</name>
+       <value>@idx</value>
+        <!--<value>root@123</value>-->
+    </property>
+
+    <property>
+        <name>dt.operator.jdbc2.prop.tablename</name>
+        <value>inRange</value>
+    </property>
+
+    <property>
+        <name>dt.operator.jdbc2.port.input.attr.TUPLE_CLASS</name>
+        <value>com.example.myapexapp.PojoEvent</value>
+    </property>
+
+    <property>
+        <name>dt.operator.jdbc2.fieldInfosItem[0]</name>
+        <value>
+            {
+            "sqlType": 4,
+            "columnName":"id",
+            "pojoFieldExpression": "id",
+            "type":"STRING"
+            }
+        </value>
+    </property>
+
+
+    <property>
+        <name>dt.operator.jdbc2.fieldInfosItem[1]</name>
+        <value>
+            {
+            "sqlType": 4,
+            "columnName":"time",
+            "pojoFieldExpression": "time",
+            "type":"STRING"
+            }
+        </value>
+    </property>
+
+    <property>
+        <name>dt.operator.jdbc2.fieldInfosItem[2]</name>
+        <value>
+            {
+            "sqlType": 4,
+            "columnName":"temperature",
+            "pojoFieldExpression": "temperature",
+            "type":"STRING"
+            }
+        </value>
+    </property>
+
+
+
+
+    <!--JDBC Properties -->
+
+    <property>
+        <name>dt.operator.jdbc.prop.batchSize</name>
+        <value>5</value>  <!--default value 1000-->
+    </property>
+
+    <property>
+        <name>dt.operator.jdbc.prop.store.databaseDriver</name>
+        <value>com.mysql.jdbc.Driver</value>
+    </property>
+
+    <property>
+        <name>dt.operator.jdbc.prop.store.databaseUrl</name>
+        <value>jdbc:mysql://localhost:3306/iot?useSSL=false</value>
+        <!--<value>jdbc:mysql://node35.morado.com:3306/iot?useSSL=false</value>-->
+    </property>
+
+    <property>
+        <name>dt.operator.jdbc.prop.store.userName</name>
+        <value>root</value>
+    </property>
+
+    <property>
+        <name>dt.operator.jdbc.prop.store.password</name>
+        <value>@idx</value>
+        <!--<value>root@123</value>-->
+    </property>
+
+    <property>
+        <name>dt.operator.jdbc.prop.tablename</name>
+        <value>sensorData</value>
+    </property>
+
+    <property>
+        <name>dt.operator.jdbc.port.input.attr.TUPLE_CLASS</name>
+        <value>com.example.myapexapp.PojoEvent</value>
+    </property>
+
+    <property>
+        <name>dt.operator.jdbc.fieldInfosItem[0]</name>
+        <value>
+            {
+            "sqlType": 4,
+            "columnName":"id",
+            "pojoFieldExpression": "id",
+            "type":"STRING"
+            }
+        </value>
+    </property>
+
+
+    <property>
+        <name>dt.operator.jdbc.fieldInfosItem[1]</name>
+        <value>
+            {
+            "sqlType": 4,
+            "columnName":"time",
+            "pojoFieldExpression": "time",
+            "type":"STRING"
+            }
+        </value>
+    </property>
+
+    <property>
+        <name>dt.operator.jdbc.fieldInfosItem[2]</name>
+        <value>
+            {
+            "sqlType": 4,
+            "columnName":"temperature",
+            "pojoFieldExpression": "temperature",
+            "type":"STRING"
+            }
+        </value>
+    </property>
+
+
+
+
+
+    <!--PARTITIONING PROPERTies-->
+
+    <!--<property>-->
+    <!--<name>dt.operator.csvParser.attr.PARTITIONER</name>-->
+    <!--<value>com.datatorrent.common.partitioner.StatelessPartitioner:4</value>-->
+  <!--</property>-->
+
+
+    <!--<property>-->
+        <!--<name>dt.operator..attr.PARTITIONER</name>-->
+        <!--<value>com.datatorrent.common.partitioner.StatelessPartitioner:4</value>-->
+    <!--</property>-->
+
+
+    <!--
+      <property>
+        <name>dt.operator.operatorName.port.inputPortName.attr.PARTITION_PARALLEL</name>
+        <value>true</value>
+      </property>
+    -->
+
+</configuration>
+
+
