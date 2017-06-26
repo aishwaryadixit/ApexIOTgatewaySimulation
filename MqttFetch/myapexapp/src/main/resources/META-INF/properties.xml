@@ -101,17 +101,17 @@
 
     <property>
         <name>dt.operator.mailAlert.prop.from</name>
-        <value>aishwaryad248@gmail.com</value>
+        <value>email@gmail.com</value>
     </property>
 
     <property>
         <name>dt.operator.mailAlert.prop.smtpUserName</name>
-        <value>aishwaryad248@gmail.com</value>
+        <value>email@gmail.com</value>
     </property>
 
     <property>
         <name>dt.operator.mailAlert.prop.smtpPassword</name>
-        <value>fakeacc01</value>
+        <value>password</value>
     </property>
 
     <property>
@@ -132,7 +132,7 @@
 
     <property>
         <name>dt.operator.mailAlert.recipients(TO)</name>
-        <value>aishwaryad248@gmail.com</value>
+        <value>email@gmail.com</value>
     </property>
 
     <property>
@@ -156,17 +156,17 @@
 
     <property>
         <name>dt.operator.mailAlert2.prop.from</name>
-        <value>aishwaryad248@gmail.com</value>
+        <value>email@gmail.com</value>
     </property>
 
     <property>
         <name>dt.operator.mailAlert2.prop.smtpUserName</name>
-        <value>aishwaryad248@gmail.com</value>
+        <value>email@gmail.com</value>
     </property>
 
     <property>
         <name>dt.operator.mailAlert2.prop.smtpPassword</name>
-        <value>fakeacc01</value>
+        <value>password</value>
     </property>
 
     <property>
@@ -187,7 +187,7 @@
 
     <property>
         <name>dt.operator.mailAlert2.recipients(TO)</name>
-        <value>aishwaryad248@gmail.com</value>
+        <value>email@gmail.com</value>
     </property>
 
     <property>
