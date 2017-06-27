@@ -9,8 +9,7 @@
     <!-- File Output Operator -->
     <property>
         <name>dt.application.Fetch.operator.FileInRange.prop.filePath</name>
-        <!--<value>file:///home/aishwarya/IotApps</value>-->
-        <value>file:///home/dttbc/Sensorsinput</value>
+        <value>file:///home/user/IotApps</value>
     </property>
 
     <property>
@@ -20,7 +19,7 @@
 
     <property>
         <name>dt.application.Fetch.operator.fileAlerts.prop.filePath</name>
-        <value>file:///home/dttbc/Sensorsinput</value>
+        <value>file:///home/user/IotApps</value>
     </property>
 
     <property>
