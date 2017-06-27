@@ -154,17 +154,17 @@
 
     <property>
         <name>dt.operator.mailAlert.prop.from</name>
-        <value>aishwaryad248@gmail.com</value>
+        <value>email@gmail.com</value>
     </property>
 
     <property>
         <name>dt.operator.mailAlert.prop.smtpUserName</name>
-        <value>aishwaryad248@gmail.com</value>
+        <value>email@gmail.com</value>
     </property>
 
     <property>
         <name>dt.operator.mailAlert.prop.smtpPassword</name>
-        <value>fakeacc01</value>
+        <value>password</value>
     </property>
 
     <property>
@@ -185,7 +185,7 @@
 
     <property>
         <name>dt.operator.mailAlert.recipients(TO)</name>
-        <value>aishwaryad248@gmail.com</value>
+        <value>email@gmail.com</value>
     </property>
 
     <property>
@@ -209,17 +209,17 @@
 
     <property>
         <name>dt.operator.mailAlert2.prop.from</name>
-        <value>aishwaryad248@gmail.com</value>
+        <value>email@gmail.com</value>
     </property>
 
     <property>
         <name>dt.operator.mailAlert2.prop.smtpUserName</name>
-        <value>aishwaryad248@gmail.com</value>
+        <value>email@gmail.com</value>
     </property>
 
     <property>
         <name>dt.operator.mailAlert2.prop.smtpPassword</name>
-        <value>fakeacc01</value>
+        <value>password</value>
     </property>
 
     <property>
@@ -240,7 +240,7 @@
 
     <property>
         <name>dt.operator.mailAlert2.recipients(TO)</name>
-        <value>aishwaryad248@gmail.com</value>
+        <value>email@gmail.com</value>
     </property>
 
     <property>
@@ -273,7 +273,6 @@
     <property>
         <name>dt.operator.jdbc2.prop.store.databaseUrl</name>
         <value>jdbc:mysql://localhost:3306/iot?useSSL=false</value>
-        <!--<value>jdbc:mysql://node35.morado.com:3306/iot?useSSL=false</value>-->
     </property>
 
     <property>
@@ -283,8 +282,7 @@
 
     <property>
         <name>dt.operator.jdbc2.prop.store.password</name>
-       <value>@idx</value>
-        <!--<value>root@123</value>-->
+       <value>password</value>
     </property>
 
     <property>
@@ -352,7 +350,6 @@
     <property>
         <name>dt.operator.jdbc.prop.store.databaseUrl</name>
         <value>jdbc:mysql://localhost:3306/iot?useSSL=false</value>
-        <!--<value>jdbc:mysql://node35.morado.com:3306/iot?useSSL=false</value>-->
     </property>
 
     <property>
@@ -362,8 +359,7 @@
 
     <property>
         <name>dt.operator.jdbc.prop.store.password</name>
-        <value>@idx</value>
-        <!--<value>root@123</value>-->
+        <value>password</value>
     </property>
 
     <property>
