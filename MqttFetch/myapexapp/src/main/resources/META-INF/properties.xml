@@ -6,7 +6,30 @@
     <value>64</value>
   </property>
 
+    <!-- File Output Operator -->
+    <property>
+        <name>dt.application.Fetch.operator.FileInRange.prop.filePath</name>
+        <!--<value>file:///home/aishwarya/IotApps</value>-->
+        <value>file:///home/dttbc/Sensorsinput</value>
+    </property>
 
+    <property>
+        <name>dt.application.Fetch.operator.FileInRange.prop.outputFileName</name>
+        <value>Test</value>
+</property>
+
+    <property>
+        <name>dt.application.Fetch.operator.fileAlerts.prop.filePath</name>
+        <value>file:///home/dttbc/Sensorsinput</value>
+    </property>
+
+    <property>
+        <name>dt.application.Fetch.operator.fileAlerts.prop.outputFileName</name>
+        <value>Test</value>
+
+
+
+    </property>
     <property>
         <name>dt.application.Fetch.operator.csvParser.prop.schema</name>
         <value>{
@@ -31,6 +54,37 @@
     </property>
 
 
+
+    <property>
+        <name>dt.application.Fetch.operator.csvFormatter.prop.schema</name>
+        <value>{
+            "separator": "|",
+            "quoteChar": "\"",
+            "lineDelimiter": "",
+            "fields": [
+            {
+            "name": "id",
+            "type": "String"
+            },
+            {
+            "name": "time",
+            "type": "String"
+            },
+            {
+            "name": "temperature",
+            "type": "String"
+            }
+            ]
+            }
+        </value>
+    </property>
+    <property>
+        <name>dt.application.Fetch.operator.csvFormatter.port.in.attr.TUPLE_CLASS</name>
+        <value>com.example.myapexapp.PojoEvent</value>
+    </property>
+
+
+
     <property>
         <name>>dt.operator.jsonParser.port.out.attr.TUPLE_CLASS</name>
         <value>com.example.myapexapp.PojoEvent</value>
@@ -51,12 +105,6 @@
         <value>com.example.myapexapp.PojoEvent</value>
     </property>
 
-
-
-
-
-
-
     <property>
   <name>dt.application.Fetch.operator.console.prop.stringFormat</name>
   <value>hello world: %s</value>
@@ -68,6 +116,12 @@
         <value>com.example.myapexapp.PojoEvent</value>
     </property>
 
+
+
+    <property>
+        <name>dt.application.Fetch.operator.checksAlert.port.inputPort.attr.TUPLE_CLASS</name>
+        <value>com.example.myapexapp.PojoEvent</value>
+    </property>
 
 
 
@@ -101,17 +155,17 @@
 
     <property>
         <name>dt.operator.mailAlert.prop.from</name>
-        <value>email@gmail.com</value>
+        <value>aishwaryad248@gmail.com</value>
     </property>
 
     <property>
         <name>dt.operator.mailAlert.prop.smtpUserName</name>
-        <value>email@gmail.com</value>
+        <value>aishwaryad248@gmail.com</value>
     </property>
 
     <property>
         <name>dt.operator.mailAlert.prop.smtpPassword</name>
-        <value>password</value>
+        <value>fakeacc01</value>
     </property>
 
     <property>
@@ -132,7 +186,7 @@
 
     <property>
         <name>dt.operator.mailAlert.recipients(TO)</name>
-        <value>email@gmail.com</value>
+        <value>aishwaryad248@gmail.com</value>
     </property>
 
     <property>
@@ -156,17 +210,17 @@
 
     <property>
         <name>dt.operator.mailAlert2.prop.from</name>
-        <value>email@gmail.com</value>
+        <value>aishwaryad248@gmail.com</value>
     </property>
 
     <property>
         <name>dt.operator.mailAlert2.prop.smtpUserName</name>
-        <value>email@gmail.com</value>
+        <value>aishwaryad248@gmail.com</value>
     </property>
 
     <property>
         <name>dt.operator.mailAlert2.prop.smtpPassword</name>
-        <value>password</value>
+        <value>fakeacc01</value>
     </property>
 
     <property>
@@ -187,7 +241,7 @@
 
     <property>
         <name>dt.operator.mailAlert2.recipients(TO)</name>
-        <value>email@gmail.com</value>
+        <value>aishwaryad248@gmail.com</value>
     </property>
 
     <property>
@@ -362,6 +416,19 @@
 
 
 
+
+    <!-- KAFKA Properties -->
+
+    <property>
+        <name>dt.operator.kafka.prop.producerProperties</name>
+        <value>serializer.class=kafka.serializer.DefaultEncoder, producer.type=async,
+            metadata.broker.list=localhost:9092</value>
+    </property>
+
+    <property>
+        <name>dt.operator.kafkaOutput.prop.topic</name>
+        <value>Temperature</value>
+    </property>
 
 
     <!--PARTITIONING PROPERTies-->
